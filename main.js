@@ -61,7 +61,7 @@ window.addEventListener("load", async function () {
         let contentData;
         const currentTabData = itemsData.find(item => item.id === currentTabId);
 
-        if (!itemsData[currentTabId].title && !itemsData[currentTabId].title) {
+        if (!itemsData[currentTabId].title && !itemsData[currentTabId].content) {
             contentData = await getJsonRes(currentTabData.url, 'GET');
             itemsData[currentTabId].title = contentData.title;
             itemsData[currentTabId].content = contentData.content;
