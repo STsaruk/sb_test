@@ -79,7 +79,6 @@ window.addEventListener("load", async function () {
 
     tabItems.forEach(function (item) {
         item.addEventListener('click',  async (event) => {
-            //debugger;
             const currentTabId = event.target.getAttribute('data-tab');
             await loadTabData(currentTabId, item)
         })
